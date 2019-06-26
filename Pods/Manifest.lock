@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Localize-Swift (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Localize-Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Localize-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+
+PODFILE CHECKSUM: 3f6425df5f457be691cdeafd25274bbaa5ae9509
+
+COCOAPODS: 1.6.1

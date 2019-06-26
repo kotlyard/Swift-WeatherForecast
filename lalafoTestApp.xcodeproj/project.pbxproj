@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BA9B0B2795E551DAA8E95C5 /* Pods_lalafoTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35FAB35CE81FE77E662B204 /* Pods_lalafoTestApp.framework */; };
+		FB075CED22C3749100B173BD /* LanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB075CEC22C3749100B173BD /* LanguageTableViewController.swift */; };
+		FB075CEF22C37C6200B173BD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB075CEE22C37C6200B173BD /* SettingsTableViewController.swift */; };
+		FB29320522C209D5003F7057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29320422C209D5003F7057 /* AppDelegate.swift */; };
+		FB29320722C209D5003F7057 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29320622C209D5003F7057 /* MainViewController.swift */; };
+		FB29320A22C209D5003F7057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB29320822C209D5003F7057 /* Main.storyboard */; };
+		FB29320C22C209DF003F7057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29320B22C209DF003F7057 /* Assets.xcassets */; };
+		FB29320F22C209DF003F7057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB29320D22C209DF003F7057 /* LaunchScreen.storyboard */; };
+		FB29321B22C20A85003F7057 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29321A22C20A85003F7057 /* NetworkManager.swift */; };
+		FB29321F22C22057003F7057 /* APPSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29321E22C22057003F7057 /* APPSettings.swift */; };
+		FB29322122C2288B003F7057 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29322022C2288B003F7057 /* Tools.swift */; };
+		FB29322622C2476E003F7057 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29322522C2476E003F7057 /* Weather.swift */; };
+		FB29322822C247D6003F7057 /* WeatherFor5Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29322722C247D6003F7057 /* WeatherFor5Days.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93194CADF03BEF59E3851BCC /* Pods-lalafoTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lalafoTestApp.release.xcconfig"; path = "Target Support Files/Pods-lalafoTestApp/Pods-lalafoTestApp.release.xcconfig"; sourceTree = "<group>"; };
+		A35FAB35CE81FE77E662B204 /* Pods_lalafoTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lalafoTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54748837B4D535D8F40DFCF /* Pods-lalafoTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lalafoTestApp.debug.xcconfig"; path = "Target Support Files/Pods-lalafoTestApp/Pods-lalafoTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FB075CEC22C3749100B173BD /* LanguageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewController.swift; sourceTree = "<group>"; };
+		FB075CEE22C37C6200B173BD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		FB29320122C209D5003F7057 /* lalafoTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lalafoTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29320422C209D5003F7057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB29320622C209D5003F7057 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FB29320922C209D5003F7057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB29320B22C209DF003F7057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB29320E22C209DF003F7057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB29321022C209DF003F7057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB29321A22C20A85003F7057 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FB29321E22C22057003F7057 /* APPSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPSettings.swift; sourceTree = "<group>"; };
+		FB29322022C2288B003F7057 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		FB29322522C2476E003F7057 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FB29322722C247D6003F7057 /* WeatherFor5Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFor5Days.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB2931FE22C209D5003F7057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA9B0B2795E551DAA8E95C5 /* Pods_lalafoTestApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E2E5B8F85A2A0091C73EFC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A35FAB35CE81FE77E662B204 /* Pods_lalafoTestApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8206C04B080B4B1AB7D204E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F54748837B4D535D8F40DFCF /* Pods-lalafoTestApp.debug.xcconfig */,
+				93194CADF03BEF59E3851BCC /* Pods-lalafoTestApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FB2931F822C209D4003F7057 = {
+			isa = PBXGroup;
+			children = (
+				FB29320322C209D5003F7057 /* lalafoTestApp */,
+				FB29320222C209D5003F7057 /* Products */,
+				8206C04B080B4B1AB7D204E4 /* Pods */,
+				3E2E5B8F85A2A0091C73EFC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FB29320222C209D5003F7057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB29320122C209D5003F7057 /* lalafoTestApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB29320322C209D5003F7057 /* lalafoTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				FB29322022C2288B003F7057 /* Tools.swift */,
+				FB29320422C209D5003F7057 /* AppDelegate.swift */,
+				FB29321A22C20A85003F7057 /* NetworkManager.swift */,
+				FB29321622C20A25003F7057 /* Models */,
+				FB29321722C20A32003F7057 /* Views */,
+				FB29321822C20A3C003F7057 /* Controllers */,
+				FB29321922C20A59003F7057 /* Storyboards */,
+				FB29321022C209DF003F7057 /* Info.plist */,
+				FB29320B22C209DF003F7057 /* Assets.xcassets */,
+			);
+			path = lalafoTestApp;
+			sourceTree = "<group>";
+		};
+		FB29321622C20A25003F7057 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB29321E22C22057003F7057 /* APPSettings.swift */,
+				FB29322522C2476E003F7057 /* Weather.swift */,
+				FB29322722C247D6003F7057 /* WeatherFor5Days.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB29321722C20A32003F7057 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB29321822C20A3C003F7057 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB29320622C209D5003F7057 /* MainViewController.swift */,
+				FB075CEE22C37C6200B173BD /* SettingsTableViewController.swift */,
+				FB075CEC22C3749100B173BD /* LanguageTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB29321922C20A59003F7057 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FB29320822C209D5003F7057 /* Main.storyboard */,
+				FB29320D22C209DF003F7057 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB29320022C209D5003F7057 /* lalafoTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB29321322C209DF003F7057 /* Build configuration list for PBXNativeTarget "lalafoTestApp" */;
+			buildPhases = (
+				AEB008326EBBD8377AEE2FB1 /* [CP] Check Pods Manifest.lock */,
+				FB2931FD22C209D5003F7057 /* Sources */,
+				FB2931FE22C209D5003F7057 /* Frameworks */,
+				FB2931FF22C209D5003F7057 /* Resources */,
+				A1DE420207E8586D2A834844 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lalafoTestApp;
+			productName = lalafoTestApp;
+			productReference = FB29320122C209D5003F7057 /* lalafoTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB2931F922C209D4003F7057 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Denis KOTLYAR";
+				TargetAttributes = {
+					FB29320022C209D5003F7057 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FB2931FC22C209D4003F7057 /* Build configuration list for PBXProject "lalafoTestApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB2931F822C209D4003F7057;
+			productRefGroup = FB29320222C209D5003F7057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB29320022C209D5003F7057 /* lalafoTestApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB2931FF22C209D5003F7057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29320F22C209DF003F7057 /* LaunchScreen.storyboard in Resources */,
+				FB29320C22C209DF003F7057 /* Assets.xcassets in Resources */,
+				FB29320A22C209D5003F7057 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1DE420207E8586D2A834844 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lalafoTestApp/Pods-lalafoTestApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lalafoTestApp/Pods-lalafoTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEB008326EBBD8377AEE2FB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lalafoTestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB2931FD22C209D5003F7057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29322122C2288B003F7057 /* Tools.swift in Sources */,
+				FB29320722C209D5003F7057 /* MainViewController.swift in Sources */,
+				FB29320522C209D5003F7057 /* AppDelegate.swift in Sources */,
+				FB29321F22C22057003F7057 /* APPSettings.swift in Sources */,
+				FB29322822C247D6003F7057 /* WeatherFor5Days.swift in Sources */,
+				FB075CED22C3749100B173BD /* LanguageTableViewController.swift in Sources */,
+				FB29322622C2476E003F7057 /* Weather.swift in Sources */,
+				FB29321B22C20A85003F7057 /* NetworkManager.swift in Sources */,
+				FB075CEF22C37C6200B173BD /* SettingsTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB29320822C209D5003F7057 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB29320922C209D5003F7057 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB29320D22C209DF003F7057 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB29320E22C209DF003F7057 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB29321122C209DF003F7057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB29321222C209DF003F7057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB29321422C209DF003F7057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F54748837B4D535D8F40DFCF /* Pods-lalafoTestApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lalafoTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.lalafoTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB29321522C209DF003F7057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93194CADF03BEF59E3851BCC /* Pods-lalafoTestApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lalafoTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dkotlyar.lalafoTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB2931FC22C209D4003F7057 /* Build configuration list for PBXProject "lalafoTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29321122C209DF003F7057 /* Debug */,
+				FB29321222C209DF003F7057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB29321322C209DF003F7057 /* Build configuration list for PBXNativeTarget "lalafoTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29321422C209DF003F7057 /* Debug */,
+				FB29321522C209DF003F7057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB2931F922C209D4003F7057 /* Project object */;
+}
