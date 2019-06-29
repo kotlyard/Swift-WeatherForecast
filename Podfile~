@@ -7,4 +7,5 @@ target 'lalafoTestApp' do
 
   # Pods for lalafoTestApp
   pod 'Alamofire'
+  pod 'Localize-Swift'
 end

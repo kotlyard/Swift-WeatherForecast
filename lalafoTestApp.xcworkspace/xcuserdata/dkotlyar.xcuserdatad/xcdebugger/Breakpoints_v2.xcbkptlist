@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lalafoTestApp/Models/Weather.swift"
-            timestampString = "583255020.178074"
+            timestampString = "583509901.783025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "init(json:)"
             landmarkType = "7">
          </BreakpointContent>

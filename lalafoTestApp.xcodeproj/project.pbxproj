@@ -20,6 +20,7 @@
 		FB29322122C2288B003F7057 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29322022C2288B003F7057 /* Tools.swift */; };
 		FB29322622C2476E003F7057 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29322522C2476E003F7057 /* Weather.swift */; };
 		FB29322822C247D6003F7057 /* WeatherFor5Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29322722C247D6003F7057 /* WeatherFor5Days.swift */; };
+		FBAEA1F322C76F450081BE1C /* LanguagePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAEA1F222C76F450081BE1C /* LanguagePack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FB29322022C2288B003F7057 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		FB29322522C2476E003F7057 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		FB29322722C247D6003F7057 /* WeatherFor5Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFor5Days.swift; sourceTree = "<group>"; };
+		FBAEA1F222C76F450081BE1C /* LanguagePack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				FB29321E22C22057003F7057 /* APPSettings.swift */,
+				FBAEA1F222C76F450081BE1C /* LanguagePack.swift */,
 				FB29322522C2476E003F7057 /* Weather.swift */,
 				FB29322722C247D6003F7057 /* WeatherFor5Days.swift */,
 			);
@@ -220,14 +223,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-lalafoTestApp/Pods-lalafoTestApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -263,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBAEA1F322C76F450081BE1C /* LanguagePack.swift in Sources */,
 				FB29322122C2288B003F7057 /* Tools.swift in Sources */,
 				FB29320722C209D5003F7057 /* MainViewController.swift in Sources */,
 				FB29320522C209D5003F7057 /* AppDelegate.swift in Sources */,
@@ -301,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -362,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -419,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QR6ALTN3DU;
 				INFOPLIST_FILE = lalafoTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QR6ALTN3DU;
 				INFOPLIST_FILE = lalafoTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
