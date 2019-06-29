@@ -11,32 +11,59 @@ import Foundation
 final class APPSettigns {
     
     static let shared = APPSettigns()
-    
+    let defaults = UserDefaults.standard
     private init() {}
     
     
     var language = "English" {
         didSet {
             self.lang = self.langDict[self.language] ?? "en"
+            switch self.lang {
+            case "ru":
+                self.languagePack = LanguagesPack.Russian
+            case "de":
+                self.languagePack = LanguagesPack.German
+            case "it":
+                self.languagePack = LanguagesPack.Italian
+            case "ja":
+                self.languagePack = LanguagesPack.Japanese
+            case "ind":
+                self.languagePack = LanguagesPack.Hindi
+            default:
+                self.languagePack = LanguagesPack.English
+            }
+            NotificationCenter.default.post(name: .didChangeData, object: nil)
         }
     }
    
     var city = "Kiev"
     var countryCode = "UKR"
-    var units = "Metric"
-  
-        
+    var units = "Metric" {
+        didSet {
+            NotificationCenter.default.post(name: .didChangeData, object: nil)
+        }
+    }
+    
+    
+    var languagePack = LanguagesPack.English
+    
     var lang = "en"
     let langDict = [
         "English"   :   "en",
         "Russian"   :   "ru",
-        "Chinese"   :   "zh_cn",
-        "Arabic"    :   "ar",
-        "French"    :   "fr",
         "German"    :   "de",
         "Italian"   :   "it",
-        "Japanese"  :   "ja",
-        "Ukrainian" :   "ua",
-        "Polish"    :   "pl"
+        "Hindi"     :   "ind",
+        "Japanese"  :   "ja"
     ]
-}
+    
+    internal func saveToUserDefaults() {
+        defaults.set(self.language, forKey: "lalafoLanguage")
+        defaults.set(self.units, forKey: "lalafoMetrics")
+    }
+    
+    internal func loadFromUserDefaults() {
+        self.language = defaults.string(forKey: "lalafoLanguage") ?? "English"
+        self.units = defaults.string(forKey: "lalafoMetrics") ?? "Metric"
+    }
+} 

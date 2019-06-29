@@ -9,8 +9,11 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UITableViewController {
+class MainViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     @IBOutlet weak var sunsetLabel: UILabel!
     @IBOutlet weak var sunriseLabel: UILabel!
     @IBOutlet weak var visibilityLabel: UILabel!
@@ -19,38 +22,45 @@ class MainViewController: UITableViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mainIcon: UIImageView!
     
-    @IBAction func refreshWeather(_ sender: UIBarButtonItem) {
-        turnOffInterface()
-        CLManager.requestLocation()
-    }
-    
     
     private let CLManager = CLLocationManager()
     private let geoCoder = CLGeocoder()
     
-    private var weather: CurrentWeather? = nil {
+    private var weather: Weather? = nil {
         didSet {
             self.title = APPSettigns.shared.city
-            self.sunsetLabel.text = "Sunset: " + self.weather!.sunsetTime
-            self.sunriseLabel.text = "Sunrise: " + self.weather!.sunriseTime
-            self.visibilityLabel.text = "Visibility: " + self.weather!.visibility
-            self.windLabel.text = "Wind: " + self.weather!.windDeg + " " + self.weather!.windSpeed + (APPSettigns.shared.units == "Metric" ? "m/s" : "mi/h")
-            self.tmpLabel.text = self.weather!.tmp + (APPSettigns.shared.units == "Metric" ? " C°" : " F°")
-            self.descriptionLabel.text = self.weather?.description
+            self.sunsetLabel.text = APPSettigns.shared.languagePack["Sunset"]! + ": " + self.weather!.sunsetTime
+            self.sunriseLabel.text = APPSettigns.shared.languagePack["Sunrise"]! + ": " + self.weather!.sunriseTime
+            self.visibilityLabel.text = APPSettigns.shared.languagePack["Visibility"]! + ": " + self.weather!.visibility
+            self.windLabel.text = APPSettigns.shared.languagePack["Wind"]! + ": " + self.weather!.windDeg + " " + self.weather!.windSpeed + (APPSettigns.shared.units == "Metric" ? "m/s" : "mi/h")
+            self.tmpLabel.text = self.weather!.tmp + (APPSettigns.shared.units == "Metric" ? " °C" : " °F")
+            self.descriptionLabel.text = APPSettigns.shared.lang == "ind" ?  "स्पष्ट है" : self.weather?.description
             self.mainIcon.image = UIImage(named: (self.weather?.imgCode)!)
         }
     }
     
-    private var weatherFor5: WeatherFor5Days? = nil
+    private var weatherFor5: WeatherFor5Days? = nil {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
-  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        turnOffInterface()
         setUpLocationManager()
+        NotificationCenter.default.addObserver(self, selector: #selector(needToRefreshData), name: .didChangeData, object: nil)
+        needToRefreshData()
     }
 
+    @objc func needToRefreshData() {
+        turnOffInterface()
+        CLManager.requestLocation()
+        APPSettigns.shared.saveToUserDefaults()
+    }
+    
+    
     deinit {
         CLManager.delegate = nil
     }
@@ -69,9 +79,7 @@ extension MainViewController: CLLocationManagerDelegate {
 
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("start")
         geoCoder.reverseGeocodeLocation(locations.first!) { [weak self] (placemarks, error) in
-            print("geocode")
             guard let _ = self else { return }
             if let error = error {
                 print(error)
@@ -87,8 +95,12 @@ extension MainViewController: CLLocationManagerDelegate {
                 print("network request")
                 NetworkManager.shared.getCurrentWeather() { dict in
                     guard let tmp = dict else { print("nil nil nil"); return }
-                    self?.weather = CurrentWeather(json: tmp)
+                    self?.weather = Weather(json: tmp)
                     self!.turnOnInterface()
+                }
+                NetworkManager.shared.getWeatherFor5Days() { dict in
+                    guard let tmp = dict else { print("nil nil nil"); return }
+                    self?.weatherFor5 = WeatherFor5Days(json: tmp)
                 }
             }
         }
@@ -102,11 +114,47 @@ extension MainViewController: CLLocationManagerDelegate {
     }
 }
 
-extension MainViewController {
-    func kek () {
-        tableView.cellForRow(at: IndexPath(row: 0, section: 1))?.textLabel!.text = "sas"
+
+
+// TABLE
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return weatherFor5?.days.count ?? 1
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "sas"
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return weatherFor5?.days[section].count ?? 1
     }
+    
+ 
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if weatherFor5?.days == nil { return nil }
+        
+        let f = DateFormatter()
+        f.locale = Locale.init(identifier: "en")
+        let tmp = f.weekdaySymbols[Calendar.current.component(.weekday, from: (weatherFor5?.days[section].first!.date) ?? Date()) - 1]
+        return APPSettigns.shared.languagePack[tmp] ?? tmp
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if weatherFor5 == nil { return UITableViewCell() }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell")
+        if let rightDay = weatherFor5?.days[indexPath.section][indexPath.row] {
+            cell?.textLabel?.text = rightDay.time
+            
+            var description = rightDay.description
+            if  APPSettigns.shared.language == "Hindi" {
+                description = LanguagesPack.Hindi[description] ?? "स्पष्ट है"
+            }
+            let tmp = rightDay.tmp
+            cell?.detailTextLabel?.text =  description +  ", " +  tmp + (APPSettigns.shared.units == "Metric" ? " °C" : " °F")
+            cell?.imageView?.image = UIImage(named: rightDay.imgCode)
+            return cell!
+        }
+        return UITableViewCell()
+    }
+    
 }
