@@ -23,10 +23,28 @@
 
 ## How to build
 
- 
-5) Compile and run the app in your simulator
+1) Clone the repository
 
-6) If you see an error alert, please check "Simulator" -> "Debug" -> "Location" to change the location, or enable location when in use usage in device settings, if you accidently tapped "Deny".
+```bash
+$ git clone https://github.com/kotlyard/Swift-WeatherForecast.git
+```
+
+2) Install pods
+
+```bash
+$ cd Swift-WeatherForecast
+$ pod install
+```
+
+3) Open the workspace in Xcode
+
+```bash
+$ open "lalafoTestApp.xcworkspace"
+```
+ 
+4) Compile and run the app in your simulator
+
+5) If you see an error alert, please check "Simulator" -> "Debug" -> "Location" to change the location, or enable location when in use usage in device settings, if you accidently tapped "Deny".
 
 
 ## Screenshots
