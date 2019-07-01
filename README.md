@@ -1,4 +1,4 @@
-# lalafoTestApp
+# Swift-WeatherForecast
 
 **Swift Language Weather** is an iOS weather app developed in Swift 5 as test application. It uses [openweathermap](https://openweathermap.org/api) to seacrh for forcast.
 
