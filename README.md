@@ -1,7 +1,7 @@
 # Swift-WeatherForecast
 
-**Swift Language Weather** is an iOS weather app developed in Swift 5 as test application. It uses [openweathermap](https://openweathermap.org/api) to seacrh for forcast.
 
+**Swift Language Weather** is an iOS weather app developed in Swift 5 as test application. It uses [openweathermap](https://openweathermap.org/api) to seacrh for forcast.
 
 
 # Requirements
@@ -9,7 +9,6 @@
 * Xcode 9+
 * iOS 10+
 * Swift 5
-
 
 
 ## Features
@@ -21,13 +20,14 @@
 * Autolayout
 * Alamofire 
 
-## How to build
 
+## How to build
 
  
 5) Compile and run the app in your simulator
 
-6) If you see an error alert, please check "Simulator" -> "Debug" -> "Location" to change the location, or enable location whe in use usage in device settings, if u accidently tapped "Deny".
+6) If you see an error alert, please check "Simulator" -> "Debug" -> "Location" to change the location, or enable location when in use usage in device settings, if you accidently tapped "Deny".
+
 
 ## Screenshots
 
