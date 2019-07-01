@@ -18,7 +18,6 @@
 * Core Location
 * Setttings saving to User Defaults
 * Autolayout
-* Alamofire 
 
 
 ## How to build
