@@ -43,6 +43,6 @@ extension LanguageTableViewController {
         selected = indexPath
         tableView.cellForRow(at: selected)?.accessoryType = .checkmark
         APPSettigns.shared.language = tableView.cellForRow(at: indexPath)?.textLabel?.text ?? "Error"
-        
+        performSegue(withIdentifier: "backSegue", sender: nil)
     }
 }

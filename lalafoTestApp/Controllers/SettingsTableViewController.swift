@@ -29,5 +29,6 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
-
+    @IBAction func backSegue(_ unwindSegue: UIStoryboardSegue) {}
+    
 }

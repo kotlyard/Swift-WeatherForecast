@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
         needToRefreshData()
     }
 
-    @objc func needToRefreshData() {
+    @objc private func needToRefreshData() {
         turnOffInterface()
         CLManager.requestLocation()
         APPSettigns.shared.saveToUserDefaults()
@@ -64,6 +64,7 @@ class MainViewController: UIViewController {
     deinit {
         CLManager.delegate = nil
     }
+    
 }
 
 
@@ -79,10 +80,11 @@ extension MainViewController: CLLocationManagerDelegate {
 
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        geoCoder.reverseGeocodeLocation(locations.first!) { [weak self] (placemarks, error) in
+        guard let location = locations.first else { print("no location"); return }
+        geoCoder.reverseGeocodeLocation(location, preferredLocale: Locale.init(identifier: "en_US")) { [weak self] (placemarks, error) in
             guard let _ = self else { return }
-            if let error = error {
-                print(error)
+            if let _ = error {
+                self?.showAlert(with: error!.localizedDescription)
                 return
             }
             guard let placemark = placemarks?.first else {
@@ -90,9 +92,9 @@ extension MainViewController: CLLocationManagerDelegate {
                 return
             }
             if let city = placemark.locality, let code = placemark.isoCountryCode {
+                print(city)
                 APPSettigns.shared.city = city
                 APPSettigns.shared.countryCode = code
-                print("network request")
                 NetworkManager.shared.getCurrentWeather() { dict in
                     guard let tmp = dict else { print("nil nil nil"); return }
                     self?.weather = Weather(json: tmp)
@@ -109,7 +111,7 @@ extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         turnOnInterface()
         if self.presentedViewController == nil {
-            showAlert(with: "Error getting user location. Turn on location services and restart the Application")
+            showAlert(with: "Error getting user location. Turn on location services or change permissions and restart the application")
         }
     }
 }
