@@ -15,8 +15,8 @@
 * Swift 5 Programming Language
 * Ability to choose from 6 different languages
 * Ability to choose from metric or imperial units
-* Core Location
-* Setttings saving to User Defaults
+* Core Location usage
+* Settings saving to User Defaults
 * Autolayout
 
 
