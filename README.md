@@ -1,7 +1,7 @@
 # Swift-WeatherForecast
 
 
-**Swift Language Weather** is an weather iOS app developed in Swift 5 as test application. It uses [openweathermap](https://openweathermap.org/api) to seacrh for forcast.
+**Swift Language Weather** is an weather iOS app developed in Swift 5 as test application that uses [openweathermap](https://openweathermap.org/api).
 
 
 # Requirements
